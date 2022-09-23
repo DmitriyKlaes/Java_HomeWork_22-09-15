@@ -227,4 +227,16 @@ public class Task000 {
             return false;
         }
     }
+
+    private static int readInt(Scanner s, String prompt) {
+        while (true) {
+            System.out.print(prompt);
+            String line = s.nextLine();
+            try {
+                return Integer.parseInt(line);
+            } catch (NumberFormatException e) {
+                System.err.println("Error: wrong integer");
+            }
+        }
+    }
 }
